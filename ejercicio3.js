@@ -1,0 +1,1 @@
+alert("la suma de los dados aleatorios es: "+((parseInt(Math.random()*6)+1)+(parseInt(Math.random()*6)+1)));
