@@ -1,39 +1,36 @@
-//Herencia. Crear una clase Figura. Debe tener un método area() y perímetro() que las subclases Cuadrado y Triangulo deben sobrescribir.
-//Tip: llamar a constructor de la superclase
 class Figura{
     constructor(ancho,alto){
         this.ancho=ancho;
         this.alto=alto;
     }
     area(){
-        return this.ancho*this.alto;
     }
     perimetro(){
-        return 2*(this.ancho+this.alto);
     }
 }
 class Cuadrado extends Figura{
-    constructor(ancho,alto){
+    constructor(lado,lado){
         super(ancho,alto);
     }
     area(){
-        return super.area();
+        return lado*lado;
     }
     perimetro(){
-        return super.perimetro();
+        return 4*lado;
     }
 }
 class Triangulo extends Figura{
-    constructor(ancho,alto){
-        super(ancho,alto);
+    constructor(base,altura){
+        super(base,altura);
     }
     area(){
-        return super.area();
+        return base*altura/2;
     }
     perimetro(){
-        return super.perimetro();
+        return base+altura+Math.sqrt(base**2+altura**2,2);
     }
 }
-let cuadrado=new Cuadrado(5,5);
-let triangulo=new Triangulo(5,5);
+let lado=parseFloat(prompt("ingrese el lado del cuadrado"));
+let cuadrado=new Cuadrado(lado, lado);
+let triangulo=new Triangulo(parseFloat(prompt("ingrese la base del triangulo")),parseFloat(prompt("ingrese la altura del triangulo")));
 alert("El área del cuadrado es: "+cuadrado.area()+"\nEl perímetro del cuadrado es: "+cuadrado.perimetro()+"\nEl área del triangulo es: "+triangulo.area()+"\nEl perímetro del triangulo es: "+triangulo.perimetro());

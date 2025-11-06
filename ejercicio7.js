@@ -2,15 +2,15 @@
 function distanciaEntrePuntos(x1,y1,x2,y2){
     let distanciaX=Math.abs(x1-x2);
     let distanciaY=Math.abs(y1-y2);
-    return Math.sqrt(Math.pow(distanciaX,2)+Math.pow(distanciaY,2));
+    return Math.floor((Math.sqrt(Math.pow(distanciaX,2)+Math.pow(distanciaY,2)))*100)/100;
 }
 function distanciaalorigen(x,y){
-    return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+    return Math.floor((Math.sqrt(Math.pow(x,2)+Math.pow(y,2)))*100)/100;
 }
-let x1=5;
-let y1=5;
-let x2=10;
-let y2=10;
+let x1=parseFloat(prompt("ingrese la coordenada x del punto 1"));
+let y1=parseFloat(prompt("ingrese la coordenada y del punto 1"));
+let x2=parseFloat(prompt("ingrese la coordenada x del punto 2"));
+let y2=parseFloat(prompt("ingrese la coordenada y del punto 2"));
 let distancia=distanciaEntrePuntos(x1,y1,x2,y2);
 let distanciaAlOrigen=distanciaalorigen(x1,y1);
 let distanciaAlOrigen2=distanciaalorigen(x2,y2);

@@ -1,9 +1,9 @@
 function gradosaRadianes(grados){
     const radian=grados*Math.PI/180;
-    return "el seno es: "+Math.sin(radian)+"\nel coseno es: "+Math.cos(radian);
+    return "el seno es: "+Math.floor(Math.sin(radian)*100)/100+"\nel coseno es: "+Math.floor(Math.cos(radian)*100)/100;
 }
 function RadianesaGrados(radian){
-    const grados=radian*180/Math.PI;
+    const grados=Math.floor(radian*180/Math.PI*100)/100;
     return grados;
 }
 const num1=parseFloat(prompt("ingrese grados sexagecimales"));

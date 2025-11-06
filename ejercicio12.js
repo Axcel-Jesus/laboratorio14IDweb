@@ -29,3 +29,10 @@ class Administrador extends Usuario{
         alert("Permisos: "+this.permisos);
     }
 }
+
+//siguente problema
+
+let usuarios=[new Cliente("Juan","juan@gmail.com"),new Administrador("Maria","maria@gmail.com"),new Usuario("Pepe","pepe@gmail.com"),new Administrador("Luis","luis@gmail.com")];
+usuarios.forEach(function(usuario){
+    usuario.mostrarInfo();
+});

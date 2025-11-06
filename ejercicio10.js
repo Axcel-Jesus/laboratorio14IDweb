@@ -1,6 +1,3 @@
-//Modificar Producto para que el getter precio devuelva el valor con formato de moneda ($120.00) y que el setter acepte
-//tanto número como cadena ("120.5")
-//Tip: puedes usar Number() y toFixed(2)
 class Producto{
     constructor(nombre,precio,stock){
         this.nombre=nombre;
